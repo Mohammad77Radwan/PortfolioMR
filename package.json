@@ -1,0 +1,41 @@
+{
+  "name": "portfolio-next",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^7.0.8",
+    "@hookform/resolvers": "^3.9.0",
+    "@netlify/plugin-nextjs": "^5.10.3",
+    "axios": "^1.7.7",
+    "clsx": "^2.1.1",
+    "date-fns": "^3.6.0",
+    "framer-motion": "^11.14.0",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^1.7.0",
+    "next": "16.2.2",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-hook-form": "^7.52.2",
+    "react-icons": "^5.4.0",
+    "react-intersection-observer": "^9.10.2",
+    "zod": "^3.24.1",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.2",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5"
+  }
+}

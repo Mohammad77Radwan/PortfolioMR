@@ -1,0 +1,51 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#064e3b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#orderGrad)"/>
+  
+  <!-- Order book visualization -->
+  <g opacity="0.95">
+    <!-- BID side (left) -->
+    <text x="80" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff" opacity="0.8">BIDS</text>
+    <rect x="50" y="85" width="80" height="16" fill="#fbbf24" rx="3" opacity="0.9"/>
+    <text x="90" y="98" font-family="Arial, sans-serif" font-size="12" fill="#000" text-anchor="middle">$45,200</text>
+    
+    <rect x="60" y="110" width="70" height="16" fill="#fbbf24" rx="3" opacity="0.8"/>
+    <text x="95" y="123" font-family="Arial, sans-serif" font-size="12" fill="#000" text-anchor="middle">$45,150</text>
+    
+    <rect x="70" y="135" width="60" height="16" fill="#fbbf24" rx="3" opacity="0.7"/>
+    <text x="100" y="148" font-family="Arial, sans-serif" font-size="12" fill="#000" text-anchor="middle">$45,100</text>
+    
+    <rect x="80" y="160" width="50" height="16" fill="#fbbf24" rx="3" opacity="0.6"/>
+    <text x="105" y="173" font-family="Arial, sans-serif" font-size="12" fill="#000" text-anchor="middle">$45,050</text>
+    
+    <!-- SPREAD indicator -->
+    <line x1="300" y1="60" x2="300" y2="190" stroke="#fbbf24" stroke-width="3" opacity="0.8" stroke-dasharray="6,4"/>
+    <text x="300" y="215" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fbbf24" text-anchor="middle">SPREAD</text>
+    
+    <!-- ASK side (right) -->
+    <text x="470" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff" opacity="0.8">ASKS</text>
+    <rect x="470" y="85" width="80" height="16" fill="#ef4444" rx="3" opacity="0.9"/>
+    <text x="510" y="98" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">$45,250</text>
+    
+    <rect x="460" y="110" width="70" height="16" fill="#ef4444" rx="3" opacity="0.8"/>
+    <text x="495" y="123" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">$45,300</text>
+    
+    <rect x="450" y="135" width="60" height="16" fill="#ef4444" rx="3" opacity="0.7"/>
+    <text x="480" y="148" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">$45,350</text>
+    
+    <rect x="440" y="160" width="50" height="16" fill="#ef4444" rx="3" opacity="0.6"/>
+    <text x="465" y="173" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">$45,400</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="300" y="320" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#fff" text-anchor="middle">Go Distributed Orderbook</text>
+  
+  <!-- Subtitle -->
+  <text x="300" y="360" font-family="Arial, sans-serif" font-size="20" fill="#d1fae5" text-anchor="middle" opacity="0.9">High-Performance Trading Engine</text>
+</svg>
