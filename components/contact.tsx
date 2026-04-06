@@ -236,43 +236,47 @@ export function Contact() {
                 aria-hidden="true"
               />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 mb-4">
-                <FormField error={errors.name?.message}>
-                  <label htmlFor="name" className="sr-only">
-                    Votre nom
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    placeholder="Votre nom"
-                    aria-invalid={!!errors.name}
-                    aria-describedby={errors.name ? "name-error" : undefined}
-                    className={cn(
-                      inputClasses(!!errors.name),
-                      'rounded-l-lg md:rounded-l-lg md:rounded-r-none border-r-0 focus:z-10',
-                      'rounded-lg md:rounded-l-lg md:rounded-r-none' // fallback for mobile
-                    )}
-                    {...register("name")}
-                  />
-                </FormField>
-                <FormField error={errors.prenom?.message}>
-                  <label htmlFor="prenom" className="sr-only">
-                    Votre prénom
-                  </label>
-                  <input
-                    id="prenom"
-                    type="text"
-                    placeholder="Votre prénom"
-                    aria-invalid={!!errors.prenom}
-                    aria-describedby={errors.prenom ? "prenom-error" : undefined}
-                    className={cn(
-                      inputClasses(!!errors.prenom),
-                      'rounded-r-lg md:rounded-r-lg md:rounded-l-none border-l-0 focus:z-10',
-                      'rounded-lg md:rounded-r-lg md:rounded-l-none' // fallback for mobile
-                    )}
-                    {...register("prenom")}
-                  />
-                </FormField>
+              <div className="flex mb-4">
+                <div className="flex-1">
+                  <FormField error={errors.name?.message}>
+                    <label htmlFor="name" className="sr-only">
+                      Votre nom
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="Votre nom"
+                      aria-invalid={!!errors.name}
+                      aria-describedby={errors.name ? "name-error" : undefined}
+                      className={cn(
+                        inputClasses(!!errors.name),
+                        'rounded-l-lg rounded-r-none w-full',
+                        'md:rounded-l-lg md:rounded-r-none'
+                      )}
+                      {...register("name")}
+                    />
+                  </FormField>
+                </div>
+                <div className="flex-1">
+                  <FormField error={errors.prenom?.message}>
+                    <label htmlFor="prenom" className="sr-only">
+                      Votre prénom
+                    </label>
+                    <input
+                      id="prenom"
+                      type="text"
+                      placeholder="Votre prénom"
+                      aria-invalid={!!errors.prenom}
+                      aria-describedby={errors.prenom ? "prenom-error" : undefined}
+                      className={cn(
+                        inputClasses(!!errors.prenom),
+                        'rounded-r-lg rounded-l-none w-full',
+                        'md:rounded-r-lg md:rounded-l-none'
+                      )}
+                      {...register("prenom")}
+                    />
+                  </FormField>
+                </div>
               </div>
 
               <div className="mb-4">
