@@ -236,7 +236,7 @@ export function Contact() {
                 aria-hidden="true"
               />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 mb-4">
                 <FormField error={errors.name?.message}>
                   <label htmlFor="name" className="sr-only">
                     Votre nom
@@ -247,7 +247,11 @@ export function Contact() {
                     placeholder="Votre nom"
                     aria-invalid={!!errors.name}
                     aria-describedby={errors.name ? "name-error" : undefined}
-                    className={inputClasses(!!errors.name)}
+                    className={cn(
+                      inputClasses(!!errors.name),
+                      'rounded-l-lg md:rounded-l-lg md:rounded-r-none border-r-0 focus:z-10',
+                      'rounded-lg md:rounded-l-lg md:rounded-r-none' // fallback for mobile
+                    )}
                     {...register("name")}
                   />
                 </FormField>
@@ -261,7 +265,11 @@ export function Contact() {
                     placeholder="Votre prénom"
                     aria-invalid={!!errors.prenom}
                     aria-describedby={errors.prenom ? "prenom-error" : undefined}
-                    className={inputClasses(!!errors.prenom)}
+                    className={cn(
+                      inputClasses(!!errors.prenom),
+                      'rounded-r-lg md:rounded-r-lg md:rounded-l-none border-l-0 focus:z-10',
+                      'rounded-lg md:rounded-r-lg md:rounded-l-none' // fallback for mobile
+                    )}
                     {...register("prenom")}
                   />
                 </FormField>
