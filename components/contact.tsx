@@ -219,6 +219,7 @@ export function Contact() {
             )}
 
             <form
+
               id="contact-form"
               onSubmit={handleSubmit(onSubmit)}
               className="space-y-6"
@@ -234,7 +235,7 @@ export function Contact() {
                 aria-hidden="true"
               />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <FormField error={errors.name?.message}>
                   <label htmlFor="name" className="sr-only">
                     Votre nom
@@ -249,7 +250,23 @@ export function Contact() {
                     {...register("name")}
                   />
                 </FormField>
+                <FormField error={errors.prenom?.message}>
+                  <label htmlFor="prenom" className="sr-only">
+                    Votre prénom
+                  </label>
+                  <input
+                    id="prenom"
+                    type="text"
+                    placeholder="Votre prénom"
+                    aria-invalid={!!errors.prenom}
+                    aria-describedby={errors.prenom ? "prenom-error" : undefined}
+                    className={inputClasses(!!errors.prenom)}
+                    {...register("prenom")}
+                  />
+                </FormField>
+              </div>
 
+              <div className="mb-4">
                 <FormField error={errors.email?.message}>
                   <label htmlFor="email" className="sr-only">
                     Votre email
@@ -260,7 +277,7 @@ export function Contact() {
                     placeholder="Votre email"
                     aria-invalid={!!errors.email}
                     aria-describedby={errors.email ? "email-error" : undefined}
-                    className={inputClasses(!!errors.email)}
+                    className={cn(inputClasses(!!errors.email), "w-full")}
                     {...register("email")}
                   />
                 </FormField>
