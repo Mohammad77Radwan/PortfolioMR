@@ -4,7 +4,7 @@
     <strong><a href="https://mohammadradwanportfolio.netlify.app/">🔴 View Live Website / Voir le Site en Direct</a></strong>
   </p>
   <p align="center">
-    <img src="https://img.shields.io/github/actions/workflow/status/Mohammad77Radwan/Portfolio-MR/ci.yml?branch=main" alt="Build Status"/>
+    <img src="https://img.shields.io/github/actions/workflow/status/Mohammad77Radwan/PortfolioMR/ci.yml?branch=main" alt="Build Status"/>
     <img src="https://img.shields.io/badge/Next.js-16.2-000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
     <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
     <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
