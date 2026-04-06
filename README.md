@@ -1,11 +1,16 @@
 
-# PortfolioMR
 
-![Next.js](https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+<p align="center">
+    <h1 align="center">PortfolioMR</h1>
+    <p align="center">
+        <strong><a href="https://your-portfolio-link.com">🔴 Live Demo</a></strong>
+    </p>
+    <p align="center">
+        <img src="https://img.shields.io/github/actions/workflow/status/Mohammad77Radwan/Portfolio-MR/ci.yml?branch=main" alt="Build Status"/>
+        <img src="https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+    </p>
+</p>
 
 > **Note:**  
 > 🇬🇧 English section first.  
@@ -142,6 +147,15 @@ PORTFOLIOMR/
 
 ### 🚀 Fonctionnalités
 
+### 🚀 Démarrage Rapide
+
+```bash
+git clone https://github.com/Mohammad77Radwan/PortfolioMR.git
+cd PortfolioMR
+npm install
+npm run dev
+```
+
 - **Blog Dynamique** : Récupère et affiche les articles depuis GitHub.
 - **UI Interactive** : Animations, compteurs et modales personnalisés.
 - **Tableau Admin** : Gestion sécurisée et basée sur les rôles.
@@ -260,3 +274,13 @@ PORTFOLIOMR/
 >  
 > **Réalisé avec ❤️ par Mohammad Radwan**  
 > _Pour toute question, ouvrez une issue ou contactez-moi !_
+
+---
+
+### 🔐 Variables d'Environnement
+
+| Nom de Variable      | Requise | Description                                      |
+|---------------------|---------|--------------------------------------------------|
+| `DATABASE_URL`      | Oui     | URL de connexion à la base de données (Prisma)   |
+| `GITHUB_TOKEN`      | Non     | Jeton GitHub pour augmenter la limite d’API      |
+| `FORM_API_KEY`      | Non     | Clé API pour l’intégration du formulaire contact |

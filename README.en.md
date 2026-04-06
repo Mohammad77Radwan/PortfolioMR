@@ -1,10 +1,15 @@
-# PortfolioMR
 
-![Next.js](https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+<p align="center">
+	<h1 align="center">PortfolioMR</h1>
+	<p align="center">
+		<strong><a href="https://your-portfolio-link.com">🔴 Live Demo</a></strong>
+	</p>
+	<p align="center">
+		<img src="https://img.shields.io/github/actions/workflow/status/Mohammad77Radwan/Portfolio-MR/ci.yml?branch=main" alt="Build Status"/>
+		<img src="https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
+		<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+	</p>
+</p>
 
 > **Note:**  
 > 🇬🇧 English section first.  
@@ -17,6 +22,15 @@
 
 ---
 ### 🚀 Features
+
+### 🚀 Quickstart
+
+```bash
+git clone https://github.com/Mohammad77Radwan/PortfolioMR.git
+cd PortfolioMR
+npm install
+npm run dev
+```
 
 - **Dynamic Blog**: Fetches and displays articles from GitHub.
 - **Interactive UI**: Custom animations, counters, and modals.
@@ -217,6 +231,16 @@ sequenceDiagram
 ---
 > **Made with ❤️ by Mohammad Radwan**  
 > _For any questions, feel free to open an issue or contact me!_  
+
+---
+
+### 🔐 Environment Variables
+
+| Variable Name      | Required | Description                                      |
+|--------------------|----------|--------------------------------------------------|
+| `DATABASE_URL`     | Yes      | Database connection string for Prisma            |
+| `GITHUB_TOKEN`     | No       | GitHub token to increase API rate limits         |
+| `FORM_API_KEY`     | No       | API key for contact form integration             |
 >  
 > **Réalisé avec ❤️ par Mohammad Radwan**  
 > _Pour toute question, ouvrez une issue ou contactez-moi !_
