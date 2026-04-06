@@ -66,6 +66,7 @@ export function Contact() {
     try {
       const formData = new FormData();
       formData.append("name", data.name);
+      formData.append("prenom", data.prenom);
       formData.append("email", data.email);
       formData.append("subject", data.subject);
       formData.append("message", data.message);
