@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">PortfolioMR - Advanced Developer Portfolio</h1>
   <p align="center">
-    <strong><a href="https://mohammadradwanportfolio.netlify.app/">🔴 View Live Demo / Voir le Site en Direct</a></strong>
+    <strong><a href="https://mohammadradwanportfolio.netlify.app/">🔴 View Live Website / Voir le Site en Direct</a></strong>
   </p>
   <p align="center">
     <img src="https://img.shields.io/github/actions/workflow/status/Mohammad77Radwan/Portfolio-MR/ci.yml?branch=main" alt="Build Status"/>
