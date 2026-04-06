@@ -1,284 +1,214 @@
-# Mohammad Radwan – Portfolio-MR
+
+# PortfolioMR
+
+![Next.js](https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+
+> **Note:**  
+> 🇬🇧 English section first.  
+> 🇫🇷 La section française suit plus bas.
 
 ---
 
-## 🚩 Table of Contents | Table des matières
+## 🇬🇧 English
 
-- [Project Overview | Vue d’ensemble](#project-overview--vue-densemble)
-- [Badges & Status](#badges--status)
-- [Architecture](#architecture)
-- [Tech Stack](#tech-stack)
-- [Features](#features)
-- [Folder Structure](#folder-structure)
-- [Setup & Usage](#setup--usage)
-- [API & Integrations](#api--integrations)
-- [DevOps & CI/CD](#devops--cicd)
-- [Testing & Quality](#testing--quality)
-- [Security & Compliance](#security--compliance)
-- [Accessibility](#accessibility)
-- [Performance & Analytics](#performance--analytics)
-- [Advanced Customization](#advanced-customization)
-- [Tech Radar](#tech-radar)
-- [Project Roadmap](#project-roadmap)
-- [Contributing Like a Pro](#contributing-like-a-pro)
-- [FAQ](#faq)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
-- [Contact](#contact)
+> **PortfolioMR** is a modern, full-stack developer portfolio built with Next.js, Tailwind CSS, and TypeScript. It features a dynamic blog powered by the GitHub API, interactive UI/UX, and a robust CI/CD pipeline.
 
 ---
 
-[![Build](https://img.shields.io/github/actions/workflow/status/Mohammad77Radwan/Portfolio-MR/ci.yml?branch=main)](https://github.com/Mohammad77Radwan/Portfolio-MR/actions)
-[![License](https://img.shields.io/github/license/Mohammad77Radwan/Portfolio-MR)](LICENSE)
-[![Next.js](https://img.shields.io/badge/Next.js-16.2.2-blue)](https://nextjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.2.2-06B6D4?logo=tailwindcss)](https://tailwindcss.com/)
+### 🚀 Features
+
+- **Dynamic Blog**: Fetches and displays articles from GitHub.
+- **Interactive UI**: Custom animations, counters, and modals.
+- **Admin Dashboard**: Secure, role-based content management.
+- **CI/CD**: Automated linting, testing, and deployment via GitHub Actions.
+- **Responsive Design**: Mobile-first, accessible, and fast.
 
 ---
 
-## 🇫🇷 Français | 🇬🇧 English
+### 🏗️ System Architecture
 
-Ce README est bilingue. Faites défiler pour la version française ou anglaise.
-
-This README is bilingual. Scroll for the French or English version.
+```mermaid
+graph TD
+    subgraph Frontend
+        A[Next.js App] -- "Tailwind CSS" --> B[UI Components]
+        A -- "Turbopack" --> C[Fast Bundling]
+    end
+    subgraph Backend
+        D[API Routes] -- "Prisma ORM" --> E[Database]
+        D -- "GitHub API" --> F[Blog Content]
+    end
+    B -- "User Actions" --> D
+    F -- "Markdown Articles" --> B
+    E -- "Project Data" --> B
+```
 
 ---
 
-# 🇬🇧 English
+### ⚙️ CI/CD Pipeline Workflow
 
-## 🚀 Advanced Developer Portfolio
-A modern, production-grade portfolio for full-stack and AI projects. Built with Next.js 16, React 19, Tailwind CSS, and a real-time blog integration. Designed for performance, accessibility, and developer experience.
-
-## 🏗️ Tech Stack
-| Layer         | Technology                | Version   |
-|--------------|---------------------------|-----------|
-| Frontend     | Next.js                   | 16.2.2    |
-| UI           | React                     | 19.2.4    |
-| Styling      | Tailwind CSS              | 4.2.2     |
-| Animations   | Framer Motion, Lucide     | 11.14.0, 1.7.0 |
-| Markdown     | gray-matter               | 4.0.3     |
-| API          | Next.js API Routes        |           |
-| Data Fetch   | Axios, Fetch API          | 1.7.7     |
-| State        | React, Zustand            | 4.5.5     |
-| Forms        | React Hook Form           | 7.52.2    |
-| Lint/Format  | ESLint, Prettier          | 9.x       |
-| CI/CD        | GitHub Actions            |           |
-
-## 📦 Folder Structure
+```mermaid
+flowchart LR
+    A[GitHub Push/PR] --> B[GitHub Actions]
+    B --> C[Install & Lint]
+    C --> D[Build]
+    D --> E[Test]
+    E --> F[Deploy to Netlify]
+    F --> G[Production]
 ```
-Portfolio-MR/
-├── portfolio-next/
-│   ├── app/
-│   │   ├── api/
-│   │   │   └── blog-articles/route.ts   # Real-time blog API
-│   │   ├── layout.tsx                   # Root layout
-│   │   └── page.tsx                     # Main page
-│   ├── components/                      # UI components
-│   ├── lib/                             # Data & utils
-│   ├── public/                          # Static assets
-│   ├── styles/                          # Global styles
-│   ├── types/                           # TypeScript types
-│   ├── tailwind.config.js               # Tailwind config
-│   └── ...
-├── certifications/                      # Certifications & docs
-├── cv/                                  # CV & resume
-├── documentation/                       # E5/E4 docs, checklists
-├── projets/                             # Project templates
-├── stages/                              # Internships
-└── ...
-```
-
-## 🖼️ Architecture Diagram
-<p align="center">
-  <img src="assets/architecture-diagram.svg" alt="Architecture Diagram" width="600"/>
-</p>
-
-### CI/CD Pipeline
-<p align="center">
-  <img src="assets/cicd-pipeline.svg" alt="CI/CD Pipeline Diagram" width="600"/>
-</p>
-
-### Data Flow
-<p align="center">
-  <img src="assets/data-flow.svg" alt="Data Flow Diagram" width="600"/>
-</p>
-
-## ✨ Features
-- ⚡ **Lightning-fast**: Next.js 16 + Turbopack
-- 🎨 **Modern UI**: Tailwind, Framer Motion, Lucide
-- 📝 **Live Blog Sync**: Fetches MDX articles from GitHub in real time
-- 🧑‍💻 **Developer Experience**: TypeScript, ESLint, Prettier, VS Code ready
-- 🛡️ **Accessibility**: Keyboard nav, color contrast, semantic HTML
-- 📱 **Responsive**: Mobile-first, adaptive layouts
-- 🧩 **Component-driven**: Reusable, composable UI
-- 🌐 **Multi-language**: French-first, easy to localize
-- 🏆 **Showcases Skills**: Real projects, tech radar, certifications
-
-## ⚙️ Setup & Usage
-```bash
-# 1. Clone the repo
-$ git clone https://github.com/Mohammad77Radwan/Portfolio-MR.git
-$ cd Portfolio-MR/portfolio-next
-# 2. Install dependencies
-$ npm install
-# 3. (Optional) Add a GitHub token for higher API rate limits
-$ echo "GITHUB_TOKEN=ghp_xxx..." >> .env.local
-# 4. Start the dev server
-$ npm run dev
-# 5. Open http://localhost:3000
-```
-
-## 🔌 API & Integrations
-- **/api/blog-articles**: Serverless API route fetches MDX articles from the Blog-Veille-Tech repo using the GitHub API.
-- **Contact Form**: Integrated with Formspree (see `.env.local`).
-- **Live GitHub Stats**: Pulls real commit/project data for credibility.
-
-## 🧑‍💻 Advanced Developer Notes
-- **Performance**: Turbopack, code splitting, image optimization, minimal bundle size.
-- **Accessibility**: Focus rings, ARIA labels, color contrast, keyboard nav.
-- **Testing**: Ready for Jest/React Testing Library (add your tests in `/__tests__/`).
-- **CI/CD**: GitHub Actions for lint/build/test (add your workflow in `.github/workflows/`).
-- **Security**: No secrets in repo, uses environment variables, rate-limited API.
-- **Customization**: Easily add new sections, projects, or integrations.
-- **Deployment**: Vercel-ready, works on Netlify/Render/Heroku.
-
-## 🏅 Why This Portfolio Stands Out
-- **Real-time blog integration** (not static): Showcases live writing and technical depth.
-- **Professional structure**: Mirrors enterprise-grade monorepo setups.
-- **Modern stack**: Next.js 16, React 19, Tailwind 4, Framer Motion, Lucide.
-- **Impressive UI/UX**: Animations, gradients, accessibility, and mobile-first.
-- **Comprehensive documentation**: For recruiters, collaborators, and future you.
-- **Ready for scale**: Add more projects, sections, or even a CMS.
-
-## 🤝 Contributing
-Pull requests are welcome! For major changes, open an issue first to discuss what you’d like to change.
-
-## 📄 License
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
-## 📬 Contact
-- **Email**: mohammadradwn804@gmail.com
-- **GitHub**: [@Mohammad77Radwan](https://github.com/Mohammad77Radwan)
-- **Location**: Saint-Étienne, France
-
-> _“Built with passion for modern web, developer experience, and technical excellence.”_
 
 ---
 
-# 🇫🇷 Français
+### 🔄 Data Flow / User Journey
 
-## 🚀 Portfolio Développeur Avancé
-Un portfolio moderne et professionnel pour projets full-stack et IA. Construit avec Next.js 16, React 19, Tailwind CSS, et une intégration blog en temps réel. Pensé pour la performance, l’accessibilité et l’expérience développeur.
-
-## 🏗️ Stack Technique
-| Couche        | Technologie               | Version   |
-|--------------|--------------------------|-----------|
-| Frontend     | Next.js                  | 16.2.2    |
-| UI           | React                    | 19.2.4    |
-| Style        | Tailwind CSS             | 4.2.2     |
-| Animations   | Framer Motion, Lucide    | 11.14.0, 1.7.0 |
-| Markdown     | gray-matter              | 4.0.3     |
-| API          | Next.js API Routes       |           |
-| Data Fetch   | Axios, Fetch API         | 1.7.7     |
-| State        | React, Zustand           | 4.5.5     |
-| Forms        | React Hook Form          | 7.52.2    |
-| Lint/Format  | ESLint, Prettier         | 9.x       |
-| CI/CD        | GitHub Actions           |           |
-
-## 📦 Structure des Dossiers
-```
-Portfolio-MR/
-├── portfolio-next/
-│   ├── app/
-│   │   ├── api/
-│   │   │   └── blog-articles/route.ts   # API blog temps réel
-│   │   ├── layout.tsx                   # Layout racine
-│   │   └── page.tsx                     # Page principale
-│   ├── components/                      # Composants UI
-│   ├── lib/                             # Données & utilitaires
-│   ├── public/                          # Assets statiques
-│   ├── styles/                          # Styles globaux
-│   ├── types/                           # Types TypeScript
-│   ├── tailwind.config.js               # Config Tailwind
-│   └── ...
-├── certifications/                      # Certificats & docs
-├── cv/                                  # CV & résumé
-├── documentation/                       # Docs E5/E4, checklists
-├── projets/                             # Templates projets
-├── stages/                              # Stages
-└── ...
+```mermaid
+sequenceDiagram
+    participant User
+    participant UI
+    participant API
+    participant GitHub
+    User->>UI: Visit Portfolio
+    UI->>API: Request Blog Posts
+    API->>GitHub: Fetch Markdown Articles
+    GitHub-->>API: Return Content
+    API-->>UI: Serve Blog Data
+    UI-->>User: Render Articles & Projects
 ```
 
-## 🖼️ Schéma d’Architecture
-<p align="center">
-  <img src="assets/architecture-diagram.svg" alt="Schéma d’Architecture" width="600"/>
-</p>
+---
 
-### Pipeline CI/CD
-<p align="center">
-  <img src="assets/cicd-pipeline.svg" alt="Schéma CI/CD" width="600"/>
-</p>
+### 🧰 Tech Stack
 
-### Flux de Données
-<p align="center">
-  <img src="assets/data-flow.svg" alt="Schéma Flux de Données" width="600"/>
-</p>
+| Icon | Technology      | Purpose / Rôle                                      |
+|------|-----------------|-----------------------------------------------------|
+| ⚡   | **Next.js**     | React framework for SSR, routing, and fast builds   |
+| 🎨   | **Tailwind CSS**| Utility-first CSS for rapid UI development          |
+| 🟦   | **TypeScript**  | Type safety and better developer experience         |
+| 🟣   | **Prisma**      | ORM for type-safe database access                   |
+| 🐙   | **GitHub API**  | Dynamic blog content from GitHub repositories       |
+| 🚦   | **GitHub Actions** | Automated CI/CD for linting, testing, deployment |
+| 🌐   | **Netlify**     | Fast, global deployment and hosting                 |
 
-## ✨ Fonctionnalités
-- ⚡ **Ultra-rapide** : Next.js 16 + Turbopack
-- 🎨 **UI Moderne** : Tailwind, Framer Motion, Lucide
-- 📝 **Blog en temps réel** : Récupère les articles MDX depuis GitHub
-- 🧑‍💻 **Expérience Dev** : TypeScript, ESLint, Prettier, prêt pour VS Code
-- 🛡️ **Accessibilité** : Navigation clavier, contraste, HTML sémantique
-- 📱 **Responsive** : Mobile-first, adaptatif
-- 🧩 **Composants** : UI réutilisables, composables
-- 🌐 **Multi-langue** : Français par défaut, facile à localiser
-- 🏆 **Valorise les compétences** : Projets réels, radar tech, certifications
+---
 
-## ⚙️ Installation & Utilisation
-```bash
-# 1. Cloner le repo
-$ git clone https://github.com/Mohammad77Radwan/Portfolio-MR.git
-$ cd Portfolio-MR/portfolio-next
-# 2. Installer les dépendances
-$ npm install
-# 3. (Optionnel) Ajouter un token GitHub pour lever les limites API
-$ echo "GITHUB_TOKEN=ghp_xxx..." >> .env.local
-# 4. Lancer le serveur dev
-$ npm run dev
-# 5. Ouvrir http://localhost:3000
+### 📦 Project Structure
+
+> **Note:**  
+> The project follows a modular structure for scalability and maintainability.
+
+```
+/app         # Next.js app directory
+/components  # Reusable UI components
+/hooks       # Custom React hooks
+/lib         # Utility libraries (auth, data, etc.)
+/public      # Static assets
+/types       # TypeScript types
 ```
 
-## 🔌 API & Intégrations
-- **/api/blog-articles** : API serverless qui récupère les articles MDX du repo Blog-Veille-Tech via GitHub API.
-- **Formulaire de contact** : Intégré à Formspree (voir `.env.local`).
-- **Stats GitHub live** : Données réelles de commits/projets.
+---
 
-## 🧑‍💻 Notes Avancées
-- **Performance** : Turbopack, code splitting, optimisation images, bundle minimal.
-- **Accessibilité** : Focus, ARIA, contraste, navigation clavier.
-- **Tests** : Prêt pour Jest/React Testing Library (ajoutez vos tests dans `/__tests__/`).
-- **CI/CD** : GitHub Actions pour lint/build/test (workflow dans `.github/workflows/`).
-- **Sécurité** : Pas de secrets dans le repo, variables d’env, API limitée.
-- **Customisation** : Ajoutez facilement sections, projets, intégrations.
-- **Déploiement** : Prêt Vercel, fonctionne sur Netlify/Render/Heroku.
+## 🇫🇷 Français
 
-## 🏅 Pourquoi ce Portfolio est Unique
-- **Blog temps réel** (pas statique) : Montre la veille et la profondeur technique.
-- **Structure pro** : Inspirée des monorepos d’entreprise.
-- **Stack moderne** : Next.js 16, React 19, Tailwind 4, Framer Motion, Lucide.
-- **UI/UX remarquable** : Animations, gradients, accessibilité, mobile-first.
-- **Doc complète** : Pour recruteurs, collaborateurs, et vous-même.
-- **Prêt à scaler** : Ajoutez projets, sections, ou un CMS.
+> **PortfolioMR** est un portfolio développeur full-stack moderne, construit avec Next.js, Tailwind CSS et TypeScript. Il propose un blog dynamique alimenté par l’API GitHub, une interface interactive, et un pipeline CI/CD robuste.
 
-## 🤝 Contribution
-Les PR sont bienvenues ! Pour les changements majeurs, ouvrez une issue pour discuter.
+---
 
-## 📄 Licence
-Projet sous licence MIT. Voir [LICENSE](LICENSE).
+### 🚀 Fonctionnalités
 
-## 📬 Contact
-- **Email** : mohammadradwn804@gmail.com
-- **GitHub** : [@Mohammad77Radwan](https://github.com/Mohammad77Radwan)
-- **Localisation** : Saint-Étienne, France
+- **Blog Dynamique** : Récupère et affiche les articles depuis GitHub.
+- **UI Interactive** : Animations, compteurs et modales personnalisés.
+- **Tableau Admin** : Gestion sécurisée et basée sur les rôles.
+- **CI/CD** : Lint, tests et déploiement automatisés via GitHub Actions.
+- **Design Responsive** : Mobile-first, accessible et rapide.
 
-> _“Conçu avec passion pour le web moderne, l’expérience dev et l’excellence technique.”_
+---
+
+### 🏗️ Architecture du Système
+
+```mermaid
+graph TD
+    subgraph Frontend
+        A[App Next.js] -- "Tailwind CSS" --> B[Composants UI]
+        A -- "Turbopack" --> C[Bundling Rapide]
+    end
+    subgraph Backend
+        D[Routes API] -- "Prisma ORM" --> E[Base de Données]
+        D -- "API GitHub" --> F[Contenu Blog]
+    end
+    B -- "Actions Utilisateur" --> D
+    F -- "Articles Markdown" --> B
+    E -- "Données Projets" --> B
+```
+
+---
+
+### ⚙️ Pipeline CI/CD
+
+```mermaid
+flowchart LR
+    A[Push/PR GitHub] --> B[GitHub Actions]
+    B --> C[Install & Lint]
+    C --> D[Build]
+    D --> E[Test]
+    E --> F[Déploiement Netlify]
+    F --> G[Production]
+```
+
+---
+
+### 🔄 Flux de Données / Parcours Utilisateur
+
+```mermaid
+sequenceDiagram
+    participant Utilisateur
+    participant UI
+    participant API
+    participant GitHub
+    Utilisateur->>UI: Visite le Portfolio
+    UI->>API: Demande des articles
+    API->>GitHub: Récupère les articles Markdown
+    GitHub-->>API: Retourne le contenu
+    API-->>UI: Sert les données du blog
+    UI-->>Utilisateur: Affiche articles & projets
+```
+
+---
+
+### 🧰 Pile Technologique
+
+| Icône | Technologie      | Rôle / Purpose                                      |
+|-------|------------------|-----------------------------------------------------|
+| ⚡    | **Next.js**      | Framework React pour SSR, routage, builds rapides   |
+| 🎨    | **Tailwind CSS** | CSS utilitaire pour développement UI rapide         |
+| 🟦    | **TypeScript**   | Typage statique et expérience développeur améliorée |
+| 🟣    | **Prisma**       | ORM pour accès base de données type-safe            |
+| 🐙    | **API GitHub**   | Blog dynamique depuis les dépôts GitHub             |
+| 🚦    | **GitHub Actions** | CI/CD automatisé pour lint, tests, déploiement   |
+| 🌐    | **Netlify**      | Hébergement et déploiement rapide et global         |
+
+---
+
+### 📦 Structure du Projet
+
+> **Note :**  
+> Le projet suit une structure modulaire pour la scalabilité et la maintenabilité.
+
+```
+/app         # Dossier principal Next.js
+/components  # Composants UI réutilisables
+/hooks       # Hooks React personnalisés
+/lib         # Librairies utilitaires (auth, data, etc.)
+/public      # Fichiers statiques
+/types       # Types TypeScript
+```
+
+---
+
+> **Made with ❤️ by Mohammad Radwan**  
+> _For any questions, feel free to open an issue or contact me!_  
+>  
+> **Réalisé avec ❤️ par Mohammad Radwan**  
+> _Pour toute question, ouvrez une issue ou contactez-moi !_
