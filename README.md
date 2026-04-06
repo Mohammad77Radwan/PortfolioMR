@@ -1,73 +1,69 @@
-
-
 <p align="center">
-    <h1 align="center">PortfolioMR</h1>
-    <p align="center">
-        <strong><a href="https://your-portfolio-link.com">🔴 Live Demo</a></strong>
-    </p>
-    <p align="center">
-        <img src="https://img.shields.io/github/actions/workflow/status/Mohammad77Radwan/Portfolio-MR/ci.yml?branch=main" alt="Build Status"/>
-        <img src="https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
-        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-    </p>
+  <h1 align="center">PortfolioMR - Advanced Developer Portfolio</h1>
+  <p align="center">
+    <strong><a href="https://mohammadradwanportfolio.netlify.app/">🔴 View Live Demo / Voir le Site en Direct</a></strong>
+  </p>
+  <p align="center">
+    <img src="https://img.shields.io/github/actions/workflow/status/Mohammad77Radwan/Portfolio-MR/ci.yml?branch=main" alt="Build Status"/>
+    <img src="https://img.shields.io/badge/Next.js-16.2-000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+    <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
+  </p>
 </p>
 
-> **Note:**  
-> 🇬🇧 English section first.  
-> 🇫🇷 La section française suit plus bas.
+> **Note:**
+> 🇬🇧 English documentation first. 
+> 🇫🇷 La documentation en français suit plus bas.
 
 ---
 
 ## 🇬🇧 English
 
-> **PortfolioMR** is a modern, full-stack developer portfolio built with Next.js, Tailwind CSS, and TypeScript. It features a dynamic blog powered by the GitHub API, interactive UI/UX, and a robust CI/CD pipeline.
+## 🚀 Overview
+
+**PortfolioMR** is the main repository for Mohammad Radwan's professional and academic profile. Built with Next.js, Tailwind CSS, and TypeScript, it serves a dual purpose:
+1. **A modern, production-grade web portfolio** featuring a dynamic blog powered by the GitHub API and an interactive UI.
+2. **An official academic repository** centralizing E4/E5 compliance documentation and competency evidence for the BTS SIO SLAM (Session 2026) degree.
 
 ---
 
-### 🚀 Features
+## ⚡ Quickstart
 
-- **Dynamic Blog**: Fetches and displays articles from GitHub.
-- **Interactive UI**: Custom animations, counters, and modals.
-- **Admin Dashboard**: Secure, role-based content management.
-- **CI/CD**: Automated linting, testing, and deployment via GitHub Actions.
-- **Responsive Design**: Mobile-first, accessible, and fast.
+```bash
+# 1. Clone the repository
+git clone [https://github.com/Mohammad77Radwan/PortfolioMR.git](https://github.com/Mohammad77Radwan/PortfolioMR.git)
+
+# 2. Navigate to the Next.js app
+cd PortfolioMR/portfolio-next
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
+```
 
 ---
 
-### 🏗️ System Architecture
+## 🏗️ System Architecture
 
 ```mermaid
 graph TD
     subgraph Frontend
-        A[Next.js App] -- "Tailwind CSS" --> B[UI Components]
+        A[Next.js App] -- "Tailwind CSS v4" --> B[UI Components]
         A -- "Turbopack" --> C[Fast Bundling]
     end
     subgraph Backend
-        D[API Routes] -- "Prisma ORM" --> E[Database]
-        D -- "GitHub API" --> F[Blog Content]
+        D[Next.js API Routes] -- "GitHub API" --> F[Blog Content]
+        D -- "Formspree" --> E[Contact Handling]
     end
     B -- "User Actions" --> D
-    F -- "Markdown Articles" --> B
-    E -- "Project Data" --> B
+    F -- "Live MDX Articles" --> B
 ```
 
 ---
 
-### ⚙️ CI/CD Pipeline Workflow
-
-```mermaid
-flowchart LR
-    A[GitHub Push/PR] --> B[GitHub Actions]
-    B --> C[Install & Lint]
-    C --> D[Build]
-    D --> E[Test]
-    E --> F[Deploy to Netlify]
-    F --> G[Production]
-```
-
----
-
-### 🔄 Data Flow / User Journey
+## 🔄 Data Flow / User Journey
 
 ```mermaid
 sequenceDiagram
@@ -85,119 +81,119 @@ sequenceDiagram
 
 ---
 
-### 🧰 Tech Stack
+## 🧰 Tech Stack
 
-| Icon | Technology      | Purpose / Rôle                                      |
-|------|-----------------|-----------------------------------------------------|
-| ⚡   | **Next.js**     | React framework for SSR, routing, and fast builds   |
-| 🎨   | **Tailwind CSS**| Utility-first CSS for rapid UI development          |
-| 🟦   | **TypeScript**  | Type safety and better developer experience         |
-| 🟣   | **Prisma**      | ORM for type-safe database access                   |
-| 🐙   | **GitHub API**  | Dynamic blog content from GitHub repositories       |
-| 🚦   | **GitHub Actions** | Automated CI/CD for linting, testing, deployment |
-| 🌐   | **Netlify**     | Fast, global deployment and hosting                 |
+| Icon | Technology       | Purpose / Role                                      |
+|------|------------------|-----------------------------------------------------|
+| ⚡   | **Next.js 16** | React framework for SSR, routing, and fast builds   |
+| 🎨   | **Tailwind CSS** | Utility-first CSS for rapid, responsive UI design   |
+| 🟦   | **TypeScript** | Type safety and scalable developer experience       |
+| 🎬   | **Framer Motion**| Fluid layout animations and page transitions        |
+| 🐙   | **GitHub API** | Dynamic blog content pulled directly from repos     |
+| 🚦   | **GitHub Actions**| Automated CI/CD for linting, testing, deployment   |
+| 🌐   | **Netlify** | Fast, global deployment and edge hosting            |
 
 ---
 
-### 📦 Project Structure
+## 🔐 Environment Variables
 
-> **Note :**  
-> Arborescence professionnelle et annotée du projet.
+To run the Next.js app locally with full functionality, create a `.env.local` file in the `portfolio-next/` directory:
 
-```plaintext
-PORTFOLIOMR/
-├── app/                  # App Next.js 13+ (routage, endpoints API)
-│   ├── actions/          # Actions serveur sécurisées (mutations côté serveur)
-│   ├── api/              # Routes API serverless (ex: contact, blog)
-│   │   └── contact/      # API de contact (traitement des formulaires)
-│   │       └── route.ts  # Route API pour le formulaire de contact
-│   ├── globals.css       # Styles globaux de l’application
-│   ├── layout.tsx        # Layout racine & providers globaux
-│   ├── page.tsx          # Page principale (accueil)
-│   ├── robots.ts         # Fichier robots.txt dynamique
-│   └── sitemap.ts        # Génération du sitemap XML
-├── components/           # Composants UI réutilisables et modulaires
-│   ├── admin/            # Composants du dashboard administrateur
-│   ├── animations/       # Animations et effets visuels personnalisés
-│   ├── content/          # Rendu des articles Markdown/MDX
-│   ├── social/           # Intégrations réseaux sociaux
-│   └── ui/               # Primitives UI (squelettes, loaders, etc.)
-├── actions/              # Actions serveur Next.js globales
-├── hooks/                # Hooks React personnalisés
-├── lib/                  # Utilitaires backend (auth, data, Prisma, etc.)
-├── public/               # Fichiers statiques accessibles (images, docs)
-│   ├── documents/        # Documents PDF, Excel, etc.
-│   └── projects/         # Assets projets (démos, screenshots, logos)
-├── types/                # Types TypeScript centralisés
-├── README.md             # Documentation principale (FR/EN)
-├── README.en.md          # Documentation anglaise
-├── package.json          # Dépendances et scripts du projet
-├── tsconfig.json         # Configuration TypeScript
-├── tailwind.config.js    # Configuration Tailwind CSS
-└── ...                   # Autres fichiers de configuration et racine
+| Variable Name      | Required | Description                                      |
+|--------------------|----------|--------------------------------------------------|
+| `GITHUB_TOKEN`     | No       | GitHub PAT to increase API rate limits for the blog |
+| `NEXT_PUBLIC_FORM` | Yes      | Formspree (or equivalent) endpoint for contact form |
+
+---
+
+## 📦 Master Project Structure
+
+> **Architectural Note:**
+> This repository is structured as a monorepo, cleanly separating the Next.js web application from academic documentation and static assets.
+
+```text
+Portfolio-MR/
+├── portfolio-next/             # Main Next.js Web Application
+│   ├── app/                    # Next.js 13+ App Router (Pages & API)
+│   ├── components/             # Reusable UI components (Bento grid, Modals)
+│   ├── lib/                    # Core utilities (Data fetching, Types)
+│   ├── public/                 # Static web assets (Images, SVGs)
+│   └── tailwind.config.js      # Theme & styling configuration
+├── documentation/              # 🎓 BTS SIO E4/E5 Compliance Hub
+│   ├── competences/            # BTS competency mapping
+│   ├── evaluation/             # Jury evaluation annexes
+│   └── CHECKLIST-CONFORMITE.md # Exam checklist
+├── projets/                    # Technical evidence & project templates
+├── stages/                     # Internship documentation and reports
+├── certifications/             # Technical certifications & badges
+├── cv/                         # Resumes in multiple formats
+└── README.md / README.en.md    # Repository entry points
 ```
+
+---
+
+## 🎓 BTS SIO Compliance (E4/E5)
+
+Before jury submission, ensure the following checklist is met:
+1. E5 document links are working and downloadable via the web app.
+2. Internship documents (`stages/`) are present and finalized.
+3. The portfolio runs locally with no errors (`npm run build` succeeds).
+4. BTS competency evidence is explicitly linked inside the `projets/` directory.
+
+---
+
+<br>
+<br>
 
 ---
 
 ## 🇫🇷 Français
 
-> **PortfolioMR** est un portfolio développeur full-stack moderne, construit avec Next.js, Tailwind CSS et TypeScript. Il propose un blog dynamique alimenté par l’API GitHub, une interface interactive, et un pipeline CI/CD robuste.
+## 🚀 Vue d'ensemble
+
+**PortfolioMR** est le dépôt principal regroupant le profil professionnel et académique de Mohammad Radwan. Construit avec Next.js, Tailwind CSS et TypeScript, il remplit un double objectif :
+1. **Un portfolio web moderne de niveau production**, incluant un blog dynamique alimenté par l'API GitHub et une interface utilisateur interactive.
+2. **Un dépôt académique officiel** centralisant la documentation de conformité E4/E5 et les preuves de compétences pour le diplôme de BTS SIO SLAM (Session 2026).
 
 ---
 
-### 🚀 Fonctionnalités
-
-### 🚀 Démarrage Rapide
+## ⚡ Démarrage Rapide
 
 ```bash
-git clone https://github.com/Mohammad77Radwan/PortfolioMR.git
-cd PortfolioMR
+# 1. Cloner le dépôt
+git clone [https://github.com/Mohammad77Radwan/PortfolioMR.git](https://github.com/Mohammad77Radwan/PortfolioMR.git)
+
+# 2. Accéder à l'application Next.js
+cd PortfolioMR/portfolio-next
+
+# 3. Installer les dépendances
 npm install
+
+# 4. Lancer le serveur de développement
 npm run dev
 ```
 
-- **Blog Dynamique** : Récupère et affiche les articles depuis GitHub.
-- **UI Interactive** : Animations, compteurs et modales personnalisés.
-- **Tableau Admin** : Gestion sécurisée et basée sur les rôles.
-- **CI/CD** : Lint, tests et déploiement automatisés via GitHub Actions.
-- **Design Responsive** : Mobile-first, accessible et rapide.
-
 ---
 
-### 🏗️ Architecture du Système
+## 🏗️ Architecture du Système
 
 ```mermaid
 graph TD
     subgraph Frontend
-        A[App Next.js] -- "Tailwind CSS" --> B[Composants UI]
+        A[App Next.js] -- "Tailwind CSS v4" --> B[Composants UI]
         A -- "Turbopack" --> C[Bundling Rapide]
     end
     subgraph Backend
-        D[Routes API] -- "Prisma ORM" --> E[Base de Données]
-        D -- "API GitHub" --> F[Contenu Blog]
+        D[Routes API Next.js] -- "API GitHub" --> F[Contenu Blog]
+        D -- "Formspree" --> E[Gestion Contact]
     end
     B -- "Actions Utilisateur" --> D
-    F -- "Articles Markdown" --> B
-    E -- "Données Projets" --> B
+    F -- "Articles MDX en direct" --> B
 ```
 
 ---
 
-### ⚙️ Pipeline CI/CD
-
-```mermaid
-flowchart LR
-    A[Push/PR GitHub] --> B[GitHub Actions]
-    B --> C[Install & Lint]
-    C --> D[Build]
-    D --> E[Test]
-    E --> F[Déploiement Netlify]
-    F --> G[Production]
-```
-
----
-
-### 🔄 Flux de Données / Parcours Utilisateur
+## 🔄 Flux de Données / Parcours Utilisateur
 
 ```mermaid
 sequenceDiagram
@@ -206,81 +202,74 @@ sequenceDiagram
     participant API
     participant GitHub
     Utilisateur->>UI: Visite le Portfolio
-    UI->>API: Demande des articles
+    UI->>API: Demande des articles de blog
     API->>GitHub: Récupère les articles Markdown
     GitHub-->>API: Retourne le contenu
     API-->>UI: Sert les données du blog
-    UI-->>Utilisateur: Affiche articles & projets
+    UI-->>Utilisateur: Affiche les articles et projets
 ```
 
 ---
 
-### 🧰 Pile Technologique
+## 🧰 Pile Technologique
 
-| Icône | Technologie      | Rôle / Purpose                                      |
+| Icône | Technologie      | Rôle / Objectif                                     |
 |-------|------------------|-----------------------------------------------------|
-| ⚡    | **Next.js**      | Framework React pour SSR, routage, builds rapides   |
-| 🎨    | **Tailwind CSS** | CSS utilitaire pour développement UI rapide         |
-| 🟦    | **TypeScript**   | Typage statique et expérience développeur améliorée |
-| 🟣    | **Prisma**       | ORM pour accès base de données type-safe            |
-| 🐙    | **API GitHub**   | Blog dynamique depuis les dépôts GitHub             |
-| 🚦    | **GitHub Actions** | CI/CD automatisé pour lint, tests, déploiement   |
-| 🌐    | **Netlify**      | Hébergement et déploiement rapide et global         |
+| ⚡    | **Next.js 16** | Framework React (SSR, routage, builds ultra-rapides)|
+| 🎨    | **Tailwind CSS** | CSS utilitaire pour des interfaces responsives      |
+| 🟦    | **TypeScript** | Typage statique et expérience développeur sécurisée |
+| 🎬    | **Framer Motion**| Animations fluides et transitions de pages          |
+| 🐙    | **API GitHub** | Blog dynamique récupérant les articles depuis GitHub|
+| 🚦    | **GitHub Actions**| CI/CD automatisé (linting, tests, déploiement)     |
+| 🌐    | **Netlify** | Hébergement Edge et déploiement global rapide       |
 
 ---
 
-### 📦 Structure du Projet
+## 🔐 Variables d'Environnement
 
-> **Note :**  
-> Arborescence professionnelle et annotée du projet.
+Pour exécuter l'application Next.js localement avec toutes ses fonctionnalités, créez un fichier `.env.local` dans le dossier `portfolio-next/` :
 
-```plaintext
-PORTFOLIOMR/
-├── app/                  # App Next.js 13+ (routage, endpoints API)
-│   ├── actions/          # Actions serveur sécurisées (mutations côté serveur)
-│   ├── api/              # Routes API serverless (ex: contact, blog)
-│   │   └── contact/      # API de contact (traitement des formulaires)
-│   │       └── route.ts  # Route API pour le formulaire de contact
-│   ├── globals.css       # Styles globaux de l’application
-│   ├── layout.tsx        # Layout racine & providers globaux
-│   ├── page.tsx          # Page principale (accueil)
-│   ├── robots.ts         # Fichier robots.txt dynamique
-│   └── sitemap.ts        # Génération du sitemap XML
-├── components/           # Composants UI réutilisables et modulaires
-│   ├── admin/            # Composants du dashboard administrateur
-│   ├── animations/       # Animations et effets visuels personnalisés
-│   ├── content/          # Rendu des articles Markdown/MDX
-│   ├── social/           # Intégrations réseaux sociaux
-│   └── ui/               # Primitives UI (squelettes, loaders, etc.)
-├── actions/              # Actions serveur Next.js globales
-├── hooks/                # Hooks React personnalisés
-├── lib/                  # Utilitaires backend (auth, data, Prisma, etc.)
-├── public/               # Fichiers statiques accessibles (images, docs)
-│   ├── documents/        # Documents PDF, Excel, etc.
-│   └── projects/         # Assets projets (démos, screenshots, logos)
-├── types/                # Types TypeScript centralisés
-├── README.md             # Documentation principale (FR/EN)
-├── README.en.md          # Documentation anglaise
-├── package.json          # Dépendances et scripts du projet
-├── tsconfig.json         # Configuration TypeScript
-├── tailwind.config.js    # Configuration Tailwind CSS
-└── ...                   # Autres fichiers de configuration et racine
+| Nom de la Variable | Requise | Description                                      |
+|--------------------|---------|--------------------------------------------------|
+| `GITHUB_TOKEN`     | Non     | Token GitHub pour augmenter les limites d'API    |
+| `NEXT_PUBLIC_FORM` | Oui     | Endpoint Formspree pour le formulaire de contact |
+
+---
+
+## 📦 Structure Globale du Projet
+
+> **Note d'Architecture :**
+> Ce dépôt est structuré comme un monorepo, séparant proprement l'application web Next.js de la documentation académique et des fichiers statiques.
+
+```text
+Portfolio-MR/
+├── portfolio-next/             # Application Web Principale (Next.js)
+│   ├── app/                    # App Router Next.js 13+ (Pages & API)
+│   ├── components/             # Composants UI (Bento grid, Modales)
+│   ├── lib/                    # Utilitaires (Fetch de données, Types)
+│   ├── public/                 # Assets web statiques (Images, SVGs)
+│   └── tailwind.config.js      # Configuration du style et du thème
+├── documentation/              # 🎓 Centre de Conformité BTS SIO E4/E5
+│   ├── competences/            # Cartographie des compétences BTS
+│   ├── evaluation/             # Annexes d'évaluation pour le jury
+│   └── CHECKLIST-CONFORMITE.md # Liste de vérification pour l'examen
+├── projets/                    # Preuves techniques et templates de projets
+├── stages/                     # Documentation et rapports de stage
+├── certifications/             # Certifications techniques et badges
+├── cv/                         # CV sous différents formats
+└── README.md / README.en.md    # Points d'entrée du dépôt
 ```
 
 ---
 
-> **Made with ❤️ by Mohammad Radwan**  
-> _For any questions, feel free to open an issue or contact me!_  
->  
-> **Réalisé avec ❤️ par Mohammad Radwan**  
-> _Pour toute question, ouvrez une issue ou contactez-moi !_
+## 🎓 Conformité BTS SIO (CCF E4/E5)
+
+Avant la présentation au jury, il est impératif de vérifier les points suivants :
+1. Les liens vers les documents de l'épreuve E5 fonctionnent et sont téléchargeables depuis le portfolio web.
+2. Les documents de stages (dossier `stages/`) sont présents et définitifs.
+3. Le portfolio se lance localement sans aucune erreur (la commande `npm run build` réussit).
+4. Les preuves des compétences du BTS sont explicitement renseignées dans le dossier `projets/`.
 
 ---
 
-### 🔐 Variables d'Environnement
-
-| Nom de Variable      | Requise | Description                                      |
-|---------------------|---------|--------------------------------------------------|
-| `DATABASE_URL`      | Oui     | URL de connexion à la base de données (Prisma)   |
-| `GITHUB_TOKEN`      | Non     | Jeton GitHub pour augmenter la limite d’API      |
-| `FORM_API_KEY`      | Non     | Clé API pour l’intégration du formulaire contact |
+> **Made with ❤️ by Mohammad Radwan** > _For any questions, feel free to open an issue or contact me!_
