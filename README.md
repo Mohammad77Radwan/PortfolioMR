@@ -96,16 +96,40 @@ sequenceDiagram
 
 ### 📦 Project Structure
 
-> **Note:**  
-> The project follows a modular structure for scalability and maintainability.
+> **Note :**  
+> Arborescence professionnelle et annotée du projet.
 
-```
-/app         # Next.js app directory
-/components  # Reusable UI components
-/hooks       # Custom React hooks
-/lib         # Utility libraries (auth, data, etc.)
-/public      # Static assets
-/types       # TypeScript types
+```plaintext
+PORTFOLIOMR/
+├── app/                  # App Next.js 13+ (routage, endpoints API)
+│   ├── actions/          # Actions serveur sécurisées (mutations côté serveur)
+│   ├── api/              # Routes API serverless (ex: contact, blog)
+│   │   └── contact/      # API de contact (traitement des formulaires)
+│   │       └── route.ts  # Route API pour le formulaire de contact
+│   ├── globals.css       # Styles globaux de l’application
+│   ├── layout.tsx        # Layout racine & providers globaux
+│   ├── page.tsx          # Page principale (accueil)
+│   ├── robots.ts         # Fichier robots.txt dynamique
+│   └── sitemap.ts        # Génération du sitemap XML
+├── components/           # Composants UI réutilisables et modulaires
+│   ├── admin/            # Composants du dashboard administrateur
+│   ├── animations/       # Animations et effets visuels personnalisés
+│   ├── content/          # Rendu des articles Markdown/MDX
+│   ├── social/           # Intégrations réseaux sociaux
+│   └── ui/               # Primitives UI (squelettes, loaders, etc.)
+├── actions/              # Actions serveur Next.js globales
+├── hooks/                # Hooks React personnalisés
+├── lib/                  # Utilitaires backend (auth, data, Prisma, etc.)
+├── public/               # Fichiers statiques accessibles (images, docs)
+│   ├── documents/        # Documents PDF, Excel, etc.
+│   └── projects/         # Assets projets (démos, screenshots, logos)
+├── types/                # Types TypeScript centralisés
+├── README.md             # Documentation principale (FR/EN)
+├── README.en.md          # Documentation anglaise
+├── package.json          # Dépendances et scripts du projet
+├── tsconfig.json         # Configuration TypeScript
+├── tailwind.config.js    # Configuration Tailwind CSS
+└── ...                   # Autres fichiers de configuration et racine
 ```
 
 ---

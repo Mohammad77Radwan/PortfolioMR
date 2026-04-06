@@ -89,15 +89,39 @@ sequenceDiagram
 ### 📦 Project Structure
 
 > **Note:**  
-> The project follows a modular structure for scalability and maintainability.
+> Professionally annotated, elite project folder structure.
 
-```
-/app         # Next.js app directory
-/components  # Reusable UI components
-/hooks       # Custom React hooks
-/lib         # Utility libraries (auth, data, etc.)
-/public      # Static assets
-/types       # TypeScript types
+```plaintext
+PORTFOLIOMR/
+├── app/                  # Next.js 13+ App Router (core routing & API endpoints)
+│   ├── actions/          # Secure server actions (server-side mutations)
+│   ├── api/              # Serverless API routes (e.g., contact, blog)
+│   │   └── contact/      # Contact API (form handling)
+│   │       └── route.ts  # API route for contact form
+│   ├── globals.css       # Global application styles
+│   ├── layout.tsx        # Root layout & global providers
+│   ├── page.tsx          # Main landing page
+│   ├── robots.ts         # Dynamic robots.txt
+│   └── sitemap.ts        # Sitemap XML generation
+├── components/           # Reusable, modular UI components
+│   ├── admin/            # Admin dashboard components
+│   ├── animations/       # Custom animations and visual effects
+│   ├── content/          # Markdown/MDX article rendering
+│   ├── social/           # Social media integrations
+│   └── ui/               # UI primitives (skeletons, loaders, etc.)
+├── actions/              # Global Next.js server actions
+├── hooks/                # Custom React hooks
+├── lib/                  # Backend utilities (auth, data, Prisma, etc.)
+├── public/               # Public static files (images, docs)
+│   ├── documents/        # PDF, Excel, and other documents
+│   └── projects/         # Project assets (demos, screenshots, logos)
+├── types/                # Centralized TypeScript types
+├── README.md             # Main documentation (FR/EN)
+├── README.en.md          # English documentation
+├── package.json          # Project dependencies and scripts
+├── tsconfig.json         # TypeScript configuration
+├── tailwind.config.js    # Tailwind CSS configuration
+└── ...                   # Other config and root files
 ```
 
 ---
