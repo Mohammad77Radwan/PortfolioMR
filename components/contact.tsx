@@ -236,7 +236,7 @@ export function Contact() {
                 aria-hidden="true"
               />
 
-              <div className="flex mb-4">
+              <div className="flex gap-x-2 mb-4">
                 <div className="flex-1">
                   <FormField error={errors.name?.message}>
                     <label htmlFor="name" className="sr-only">
@@ -250,8 +250,7 @@ export function Contact() {
                       aria-describedby={errors.name ? "name-error" : undefined}
                       className={cn(
                         inputClasses(!!errors.name),
-                        'rounded-l-lg rounded-r-none w-full',
-                        'md:rounded-l-lg md:rounded-r-none'
+                        'rounded-l-lg w-full'
                       )}
                       {...register("name")}
                     />
@@ -270,8 +269,7 @@ export function Contact() {
                       aria-describedby={errors.prenom ? "prenom-error" : undefined}
                       className={cn(
                         inputClasses(!!errors.prenom),
-                        'rounded-r-lg rounded-l-none w-full',
-                        'md:rounded-r-lg md:rounded-l-none'
+                        'rounded-r-lg w-full'
                       )}
                       {...register("prenom")}
                     />
