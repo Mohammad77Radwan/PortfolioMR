@@ -132,13 +132,7 @@ Portfolio-MR/
 
 ---
 
-## 🎓 BTS SIO Compliance (E4/E5)
 
-Before jury submission, ensure the following checklist is met:
-1. E5 document links are working and downloadable via the web app.
-2. Internship documents (`stages/`) are present and finalized.
-3. The portfolio runs locally with no errors (`npm run build` succeeds).
-4. BTS competency evidence is explicitly linked inside the `projets/` directory.
 
 ---
 
@@ -262,13 +256,7 @@ Portfolio-MR/
 
 ---
 
-## 🎓 Conformité BTS SIO (CCF E4/E5)
 
-Avant la présentation au jury, il est impératif de vérifier les points suivants :
-1. Les liens vers les documents de l'épreuve E5 fonctionnent et sont téléchargeables depuis le portfolio web.
-2. Les documents de stages (dossier `stages/`) sont présents et définitifs.
-3. Le portfolio se lance localement sans aucune erreur (la commande `npm run build` réussit).
-4. Les preuves des compétences du BTS sont explicitement renseignées dans le dossier `projets/`.
 
 ---
 
