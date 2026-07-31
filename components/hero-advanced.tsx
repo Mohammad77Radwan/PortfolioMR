@@ -86,7 +86,7 @@ export function HeroAdvanced() {
           <motion.div variants={wordVariants} className="mb-8 inline-block">
             <GlassCard hoverable={false}>
               <p className="text-sm font-medium bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                🎓 BTS SIO SLAM 2ème année • Candidat Licence/Bachelor 2026
+                🎓 En recherche d'alternance L3 Informatique (Sept. 2026)
               </p>
             </GlassCard>
           </motion.div>
@@ -117,7 +117,7 @@ export function HeroAdvanced() {
                 {roleText}
               </motion.span>
               <motion.span variants={wordVariants} className="inline-block text-base md:text-xl text-slate-600 dark:text-slate-400">
-                Créateur d&apos;Expériences Web Exceptionnelles
+                Architectures Backend Haute Performance & Applications Web Modernes
               </motion.span>
             </div>
           </motion.div>
@@ -127,11 +127,7 @@ export function HeroAdvanced() {
             variants={slideUp}
             className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Étudiant en BTS SIO spécialisé en SLAM (Développement Applicatif).
-            Je construis des applications web modernes, performantes et accessibles.
-            Reconnu pour une maturité professionnelle avancée, une grande autonomie
-            et une curiosité intellectuelle rare, je suis passionné par Next.js,
-            React et les pratiques de conception user-centric.
+            Développeur Full-Stack spécialisé dans les architectures backend (Go, Node.js), les systèmes distribués et les interfaces web ultra-performantes (Next.js, React). Fort d'une expérience concrète en ingénierie logicielle et reconnu pour ma grande autonomie sur des fonctionnalités de niveau production, je conçois des solutions robustes axées sur l'optimisation. Actuellement à la recherche d'une entreprise d'accueil pour valider ma L3 Informatique.
           </motion.p>
 
           {/* Stats Cards avec Glassmorphism */}
