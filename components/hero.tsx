@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useScrambleText } from "@/hooks/use-scramble-text";
 
 export function Hero() {
-  const roleText = useScrambleText("Développeur Web Full-Stack & Designer UX/UI", {
+  const roleText = useScrambleText("Développeur Web Full-Stack", {
     duration: 1000,
     fps: 36,
   });
@@ -53,7 +53,7 @@ export function Hero() {
           className="mb-6 inline-block"
         >
           <div className="inline-block px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium">
-            👋 Bienvenue sur mon portfolio
+            🎓 En recherche d&apos;alternance L3 Informatique (Sept. 2026)
           </div>
         </motion.div>
 
@@ -66,21 +66,27 @@ export function Hero() {
         </motion.h1>
 
         {/* Subtitle */}
-        <motion.p
+        <motion.h2
           variants={itemVariants}
-          className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-4"
+          className="text-xl md:text-2xl font-semibold text-slate-700 dark:text-slate-200 mb-4"
         >
           {roleText}
-        </motion.p>
+        </motion.h2>
+
+        {/* Tagline */}
+        <motion.h3
+          variants={itemVariants}
+          className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-6 font-medium"
+        >
+          Architectures Backend Haute Performance & Applications Web Modernes
+        </motion.h3>
 
         {/* Description */}
         <motion.p
           variants={itemVariants}
           className="text-lg text-slate-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed"
         >
-          Étudiant BTS SIO SLAM passionné par le développement web moderne et l&apos;IA.
-          Je crée des applications performantes, accessibles et magnifiques avec 
-          Next.js, React et TypeScript.
+          Développeur Full-Stack spécialisé dans les architectures backend (Go, Node.js), les systèmes distribués et les interfaces web ultra-performantes (Next.js, React). Fort d&apos;une expérience concrète en ingénierie logicielle et reconnu pour ma grande autonomie sur des fonctionnalités de niveau production, je conçois des solutions robustes axées sur l&apos;optimisation. Actuellement à la recherche d&apos;une entreprise d&apos;accueil pour valider ma L3 Informatique.
         </motion.p>
 
         {/* Stats */}
