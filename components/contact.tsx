@@ -147,10 +147,10 @@ export function Contact() {
             </div>
             <h3 className="font-bold mb-2">Email</h3>
             <a
-              href="mailto:mohammadradwn804@gmail.com"
+              href="mailto:mohammadradwan804@gmail.com"
               className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm"
             >
-              mohammadradwn804@gmail.com
+              mohammadradwan804@gmail.com
             </a>
           </motion.div>
 

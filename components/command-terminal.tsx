@@ -33,7 +33,7 @@ export function CommandTerminal() {
       help: "Commandes: help, whoami, skills, contact, projects, clear",
       whoami: "Mohammad Radwan - Étudiant BTS SIO SLAM, Développeur Full-Stack.",
       skills: "Next.js, React 19, TypeScript, PHP/Laravel, SQL, UX/UI, API REST.",
-      contact: "Email: mohammadradwn804@gmail.com | GitHub: github.com/Mohammad77Radwan",
+      contact: "Email: mohammadradwan804@gmail.com | GitHub: github.com/Mohammad77Radwan",
       projects: "Mindful Journal | Code Survivors | MoreFix | API Citations | TechSolutions",
     }),
     [],

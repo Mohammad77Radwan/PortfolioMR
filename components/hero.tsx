@@ -136,7 +136,7 @@ export function Hero() {
             <GitBranch className="w-6 h-6" />
           </a>
           <a
-            href="mailto:mohammadradwn804@gmail.com"
+            href="mailto:mohammadradwan804@gmail.com"
             className="p-3 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-blue-100 dark:hover:bg-blue-900/30 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all"
             aria-label="Email"
           >
